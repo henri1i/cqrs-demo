@@ -3,6 +3,24 @@ name = "cqrs-demo"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+anyhow = "1.0.68"
+async-trait = "0.1.60"
+dotenv = "0.15.0"
+xtask = "0.1.0"
+axum-macros = "0.3.1"
+
+[dependencies.axum]
+version = "0.6.2"
+
+[dependencies.sqlx]
+version = "0.6.2"
+features = [ "runtime-tokio-rustls", "postgres" ]
+
+[dependencies.tokio]
+version = "1.23.1"
+features = [ "full" ]
+
+[dependencies.uuid]
+version = "1.2.2"
+features = ["v4", "fast-rng", "macro-diagnostics"]
